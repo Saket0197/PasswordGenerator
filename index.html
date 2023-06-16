@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Password Generator</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="container">
+
+            <h1>password generator</h1>
+
+            <div class="password-container">
+                <input type="text" class="password" placeholder="password" data-password readonly>
+                <img src="./Assets/copy.svg" class="copy-text">
+                <div class="tooltip">Copied!</div>
+            </div>
+
+            <div class="requirements-container">
+
+                <div class="length-info">
+                    <p>Password Length</p>
+                    <div class="pass-length" data-length></div>
+                    <input type="range" step="1" min="1" max="20" class="slider">
+                </div>
+
+                <div class="options">
+                   <div class="option-container">
+                        <div class="check-container">
+                            <input type="checkbox" class="check box1" id="box1">
+                            <div class="check-icon">✔</div>
+                        </div>
+                        <label for="box1">Inlcude Uppercase Letters</label><br>
+                   </div>
+                    
+                    <div class="option-container">
+                        <div class="check-container">
+                            <input type="checkbox" class="check box2" id="box2">
+                            <div class="check-icon">✔</div>
+                        </div>
+                        <label for="box2">Include Lowercase Letters</label><br>
+                    </div>
+
+                    <div class="option-container">
+                        <div class="check-container">
+                            <input type="checkbox" class="check box3" id="box3">
+                            <div class="check-icon">✔</div>
+                        </div>
+                        <label for="box3">Include Numbers</label><br>
+                    </div>
+
+                    <div class="option-container">
+                        <div class="check-container">
+                            <input type="checkbox" class="check box4" id="box4">
+                            <div class="check-icon">✔</div>
+                        </div>
+                        <label for="box4">Include Special Symbols</label><br>
+                    </div>
+                </div>
+
+                <div class="strength">
+                    <p>Strength</p>
+                    <div class="indicator" data-strength-indicator></div>
+                </div>
+
+                <div class="generate">generate password</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
